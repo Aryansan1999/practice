@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Practice</string>
+    <string name="proceed_to_pay">Proceed to Pay</string>
+    <string name="thank_you_for_being_a_great_coustomer">Thank you for being a great coustomer</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="name">Name</string>
+    <string name="address">Address</string>
+    <string name="place_your_order">place your order</string>
+    <string name="cash_on_delivery">CASH ON DELIVERY</string>
+    <string name="razor_pay">razor pay</string>
+    <string name="choose_payment_method">CHOOSE PAYMENT METHOD</string>
+
+    <string name="final_pay">FINAL PAY</string>
+
+    <string name="sign_in_with_google">sign in with google</string>
+    <string name="cash_on_deliver">Cash on delivery</string>
+    <string name="razorpay">Razorpay</string>
+
+</resources>
