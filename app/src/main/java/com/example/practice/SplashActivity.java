@@ -15,9 +15,9 @@ LottieAnimationView sp;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash);
         sp = findViewById(R.id.animationView);
-        sp.animate().translationY(8000).setDuration(4000).setStartDelay(4000);
+        //sp.animate().translationY(8000).setDuration(4000).setStartDelay(4000);
         new Handler().postDelayed(() -> {
-            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            Intent intent = new Intent(getApplicationContext(), auth.class);
             startActivity(intent);
             finish();
         }, 5000);
