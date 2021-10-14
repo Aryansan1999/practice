@@ -18,7 +18,6 @@ public class Payment extends AppCompatActivity {
     LottieAnimationView sp;
     EditText name, phone, address;
     Button place_order;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
