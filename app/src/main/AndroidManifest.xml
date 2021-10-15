@@ -27,9 +27,6 @@
             android:name=".last_page"
             android:exported="true" />
         <activity
-            android:name=".pay"
-            android:exported="true" />
-        <activity
             android:name=".Payment"
             android:exported="true" />
         <activity
