@@ -31,6 +31,7 @@ public class Payment extends AppCompatActivity implements PaymentResultListener 
     RadioGroup radioGroup;
     RadioButton radiobutton;
     String STATUS;
+    Button a,b;
     private final String TAG = " main";
 
     @Override
