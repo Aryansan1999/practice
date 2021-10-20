@@ -31,7 +31,6 @@ public class Payment extends AppCompatActivity implements PaymentResultListener 
     RadioGroup radioGroup;
     RadioButton radiobutton;
     String STATUS;
-    Button a,b;
     private final String TAG = " main";
 
     @Override
@@ -97,9 +96,7 @@ public class Payment extends AppCompatActivity implements PaymentResultListener 
     }
 
     public void startPayment() {
-        /**
-         * You need to pass current activity in order to let Razorpay create CheckoutActivity
-         */
+
         Checkout checkout = new Checkout();
         checkout.setKeyID("rzp_test_lFrShc6cBXNBkZ");
 
