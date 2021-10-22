@@ -7,6 +7,7 @@ android {
     compileSdk 30
 
     defaultConfig {
+
         multiDexEnabled true
         applicationId "com.example.practice"
         minSdk 21
@@ -22,6 +23,9 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+    buildFeatures{
+        viewBinding true
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -67,4 +71,5 @@ dependencies {
 
 
     implementation 'androidx.multidex:multidex:2.0.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 }

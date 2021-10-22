@@ -1,49 +1,53 @@
 package com.example.practice;
 
 public class dataHolder {
-    String NAME;
-    String ADDRESS;
-    String PHONE;
-    String STATUS;
+    String name;
+    String address;
+    String phone;
+    String status;
 
+    public dataHolder() {
 
-    public String getNAME() {
-        return NAME;
     }
 
-    public void setNAME(String NAME) {
-        this.NAME = NAME;
+
+    public String getName() {
+        return name;
     }
 
-    public String getADDRESS() {
-        return ADDRESS;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setADDRESS(String ADDRESS) {
-        this.ADDRESS = ADDRESS;
+    public String getAddress() {
+        return address;
     }
 
-    public String getPHONE() {
-        return PHONE;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
-    public void setPHONE(String STATUS) {
-        this.PHONE = PHONE;
+    public String getPhone() {
+        return phone;
     }
 
-    public String getSTATUS() {
-        return STATUS;
+    public void setPhone(String STATUS) {
+        this.phone = phone;
     }
 
-    public void setSTATUS(String STATUS) {
-        this.STATUS = STATUS;
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public dataHolder(String NAME, String ADDRESS, String PHONE,String STATUS) {
 
-        this.NAME = NAME;
-        this.ADDRESS = ADDRESS;
-        this.PHONE = PHONE;
-        this.STATUS = STATUS;
+        this.name = NAME;
+        this.address = ADDRESS;
+        this.phone = PHONE;
+        this.status = STATUS;
     }
 }

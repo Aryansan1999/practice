@@ -39,6 +39,10 @@ public class Payment extends AppCompatActivity implements PaymentResultListener 
         setContentView(R.layout.activity_payment);
 
         radioGroup = findViewById(R.id.radiogroup);
+        name = (EditText) findViewById(R.id.name);
+        phone = (EditText) findViewById(R.id.phone);
+        address = (EditText) findViewById(R.id.address);
+
         place_order = findViewById(R.id.place_order);
         sp = findViewById(R.id.animationView);
         //sp.animate().translationY(8000).setDuration(4000).setStartDelay(4000);
@@ -55,13 +59,27 @@ public class Payment extends AppCompatActivity implements PaymentResultListener 
                 String cod = "Cash on delivery";
                 if (radiobutton.getText().equals(cod)) {
                     STATUS = "unpaid";
-                    process();
+
+                    if (name.getText().toString().equals("") || phone.getText().toString().equals("") || address.getText().toString().equals("")) {
+                        Toast.makeText(Payment.this, "Please fill all your details", Toast.LENGTH_LONG).show();
+                    }
+                    else
+                    {
+                        process();
+                    }
                     Intent intent = new Intent(getApplicationContext(), last_page.class);
                     startActivity(intent);
                 } else {
                     startPayment();
                     STATUS = "paid";
-                    process();
+                    if (name.getText().toString().equals("") || phone.getText().toString().equals("") || address.getText().toString().equals("")) {
+                        Toast.makeText(Payment.this, "Please fill all your details", Toast.LENGTH_LONG).show();
+                    }
+                    else
+                    {
+                        process();
+                    }
+//                    process();
                     //process_razorpay();
                 }
 
@@ -70,12 +88,7 @@ public class Payment extends AppCompatActivity implements PaymentResultListener 
     }
 
     private void process() {
-        name = (EditText) findViewById(R.id.name);
-        phone = (EditText) findViewById(R.id.phone);
-        address = (EditText) findViewById(R.id.address);
-        if (name.getText().toString().equals("") || phone.getText().toString().equals("") || address.getText().toString().equals("")) {
-            Toast.makeText(Payment.this, "Please fill all your details", Toast.LENGTH_LONG).show();
-        } else {
+
             String NAME = name.getText().toString().trim();
             String PHONE = phone.getText().toString().trim();
             String ADDRESS = address.getText().toString().trim();
@@ -87,7 +100,7 @@ public class Payment extends AppCompatActivity implements PaymentResultListener 
             FirebaseDatabase database = FirebaseDatabase.getInstance();
             DatabaseReference myRef = database.getReference("customer");
             myRef.child(user.getUid()).setValue(obj);
-        }
+
     }
 
     public void onRadioButtonClicked(View view) {
