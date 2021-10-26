@@ -27,23 +27,24 @@ public class dataHolder {
         this.address = address;
     }
 
+
+    public String getStatus() {
+        return status;
+    }
+
     public String getPhone() {
         return phone;
     }
 
-    public void setPhone(String STATUS) {
+    public void setPhone(String phone) {
         this.phone = phone;
-    }
-
-    public String getStatus() {
-        return status;
     }
 
     public void setStatus(String status) {
         this.status = status;
     }
 
-    public dataHolder(String NAME, String ADDRESS, String PHONE,String STATUS) {
+    public dataHolder(String NAME, String ADDRESS, String PHONE, String STATUS) {
 
         this.name = NAME;
         this.address = ADDRESS;

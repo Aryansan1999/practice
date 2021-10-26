@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Practice">
         <activity
-            android:name=".auth"
+            android:name=".authentication"
             android:exported="true" />
         <activity
             android:name=".SplashActivity"
@@ -24,7 +24,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".last_page"
+            android:name=".display_details"
             android:exported="true" />
         <activity
             android:name=".Payment"

@@ -14,6 +14,10 @@
     <string name="cash_on_deliver">Cash on delivery</string>
     <string name="razorpay">Razorpay</string>
     <string name="skip">skip</string>
+    <string name="name">Name</string>
+    <string name="delivery_details">DELIVERY DETAILS</string>
+    <string name="phone">phone</string>
+    <string name="payment_status">Payment status</string>
 
 
 </resources>

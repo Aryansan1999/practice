@@ -16,12 +16,14 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class myAdapter extends RecyclerView.Adapter<myAdapter.viewHolder> {
+    OnClickHanler handler;
     Context context;
     ArrayList<users> usersArrayList;
 
     public MainActivity obj;
 
-    public myAdapter(Context context, ArrayList<users> usersArrayList) {
+    public myAdapter(OnClickHanler handler, Context context, ArrayList<users> usersArrayList) {
+        this.handler = handler;
         this.context = context;
         this.usersArrayList = usersArrayList;
     }

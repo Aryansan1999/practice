@@ -45,10 +45,7 @@ public class Payment extends AppCompatActivity implements PaymentResultListener 
 
         place_order = findViewById(R.id.place_order);
         sp = findViewById(R.id.animationView);
-        //sp.animate().translationY(8000).setDuration(4000).setStartDelay(4000);
         new Handler().postDelayed(() -> {
-            //Intent intent=new Intent(getApplicationContext(),StartupActivity.class);
-            //startActivity(intent);
         }, 5000);
         place_order.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,25 +59,20 @@ public class Payment extends AppCompatActivity implements PaymentResultListener 
 
                     if (name.getText().toString().equals("") || phone.getText().toString().equals("") || address.getText().toString().equals("")) {
                         Toast.makeText(Payment.this, "Please fill all your details", Toast.LENGTH_LONG).show();
-                    }
-                    else
-                    {
+                    } else {
                         process();
                     }
-                    Intent intent = new Intent(getApplicationContext(), last_page.class);
+                    Intent intent = new Intent(getApplicationContext(), display_details.class);
                     startActivity(intent);
                 } else {
                     startPayment();
                     STATUS = "paid";
                     if (name.getText().toString().equals("") || phone.getText().toString().equals("") || address.getText().toString().equals("")) {
                         Toast.makeText(Payment.this, "Please fill all your details", Toast.LENGTH_LONG).show();
-                    }
-                    else
-                    {
+                    } else {
                         process();
                     }
-//                    process();
-                    //process_razorpay();
+//
                 }
 
             }
@@ -89,17 +81,17 @@ public class Payment extends AppCompatActivity implements PaymentResultListener 
 
     private void process() {
 
-            String NAME = name.getText().toString().trim();
-            String PHONE = phone.getText().toString().trim();
-            String ADDRESS = address.getText().toString().trim();
-            String st = STATUS;
+        String NAME = name.getText().toString().trim();
+        String PHONE = phone.getText().toString().trim();
+        String ADDRESS = address.getText().toString().trim();
+        String st = STATUS;
 
 
-            dataHolder obj = new dataHolder(NAME, ADDRESS, PHONE, st);
-            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-            FirebaseDatabase database = FirebaseDatabase.getInstance();
-            DatabaseReference myRef = database.getReference("customer");
-            myRef.child(user.getUid()).setValue(obj);
+        dataHolder obj = new dataHolder(NAME, ADDRESS, PHONE, st);
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("customer");
+        myRef.child(user.getUid()).setValue(obj);
 
     }
 
@@ -143,10 +135,10 @@ public class Payment extends AppCompatActivity implements PaymentResultListener 
 
     @Override
     public void onPaymentSuccess(String s) {
-        // payment successfull pay_DGU19rDsInjcF2
+
         Log.e(TAG, " payment successfull " + s.toString());
         Toast.makeText(this, "Payment successfully done! " + s, Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(getApplicationContext(), last_page.class);
+        Intent intent = new Intent(getApplicationContext(), display_details.class);
         startActivity(intent);
 
     }

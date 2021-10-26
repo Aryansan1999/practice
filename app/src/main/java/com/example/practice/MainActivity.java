@@ -22,7 +22,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements OnClickHanler {
 
 
     RecyclerView recyclerView;
@@ -32,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
     ProgressDialog progressDialog;
     public int total = 0;
     public TextView payAmount;
-Button payNow;
+    Button payNow;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,7 +58,7 @@ Button payNow;
         payNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Payment.class);
+                Intent intent = new Intent(getApplicationContext(), Payment.class);
                 startActivity(intent);
             }
         });
@@ -91,11 +92,15 @@ Button payNow;
         });
 
     }
-    public  void paisaPlus(int amount)
-    {
-        total=total+amount;
+
+    public void paisaPlus(int amount) {
+        total = total + amount;
         payAmount.setText(String.valueOf(total));
     }
 
 
+    @Override
+    public void onClick() {
+
+    }
 }
