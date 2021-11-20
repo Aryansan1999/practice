@@ -6,22 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".display_details">
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/animationView"
-        android:layout_width="268dp"
-        android:layout_height="227dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.09"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/payment"
-        app:lottie_url="REPLACE_JSON_URL"
-        tools:ignore="MissingConstraints" />
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -39,15 +23,15 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:text="@string/delivery_details"
         android:textColor="#FFAB40"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/animationView"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="@+id/animationView"
-        app:layout_constraintTop_toBottomOf="@+id/animationView" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.118" />
 
     <TextView
         android:id="@+id/textView5"
@@ -121,10 +105,12 @@
         android:layout_height="wrap_content"
         android:text="TextView"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView7"
+        app:layout_constraintBottom_toTopOf="@+id/tv_secretCode"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tv_address" />
+        app:layout_constraintHorizontal_bias="0.441"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/tv_address"
+        app:layout_constraintVertical_bias="0.109" />
 
     <TextView
         android:id="@+id/tv_secretCode"
@@ -135,8 +121,8 @@
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/animationView"
-        app:layout_constraintStart_toStartOf="@+id/animationView"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         app:layout_constraintVertical_bias="0.763" />
 

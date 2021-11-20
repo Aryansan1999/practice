@@ -10,20 +10,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.firebase.firestore.auth.User;
-
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class myAdapter extends RecyclerView.Adapter<myAdapter.viewHolder> {
-    OnClickHanler handler;
+  //  OnClickHanler handler;
     Context context;
     ArrayList<users> usersArrayList;
 
     public MainActivity obj;
 
-    public myAdapter(OnClickHanler handler, Context context, ArrayList<users> usersArrayList) {
-        this.handler = handler;
+    public myAdapter(Context context, ArrayList<users> usersArrayList) {
+
         this.context = context;
         this.usersArrayList = usersArrayList;
     }

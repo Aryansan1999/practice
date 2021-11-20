@@ -22,7 +22,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements OnClickHanler {
+public class MainActivity extends AppCompatActivity {
 
 
     RecyclerView recyclerView;
@@ -93,14 +93,14 @@ public class MainActivity extends AppCompatActivity implements OnClickHanler {
 
     }
 
-    public void paisaPlus(int amount) {
-        total = total + amount;
-        payAmount.setText(String.valueOf(total));
-    }
-
-
-    @Override
-    public void onClick() {
-
-    }
+//    public void paisaPlus(int amount) {
+//        total = total + amount;
+//        payAmount.setText(String.valueOf(total));
+//    }
+//
+//
+//    @Override
+//    public void onClick() {
+//
+//    }
 }

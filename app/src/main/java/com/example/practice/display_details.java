@@ -26,7 +26,7 @@ public class display_details extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_DisplayPage);
+        setContentView(R.layout.activity_display_details);
         tv_name = (TextView) findViewById(R.id.tv_name);
         tv_address = (TextView) findViewById(R.id.tv_address);
         tv_phone = (TextView) findViewById(R.id.tv_phone);

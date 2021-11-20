@@ -62,15 +62,17 @@ public class Payment extends AppCompatActivity implements PaymentResultListener 
                     } else {
                         process();
                     }
-                    Intent intent = new Intent(getApplicationContext(), display_details.class);
-                    startActivity(intent);
+
                 } else {
                     startPayment();
                     STATUS = "paid";
                     if (name.getText().toString().equals("") || phone.getText().toString().equals("") || address.getText().toString().equals("")) {
                         Toast.makeText(Payment.this, "Please fill all your details", Toast.LENGTH_LONG).show();
                     } else {
-                        process();
+                        if ((phone.getText().toString().trim()).length() == 10) {
+                            process();
+                        } else
+                            Toast.makeText(getApplicationContext(), "Please enter 10 digit phone number", Toast.LENGTH_SHORT).show();
                     }
 //
                 }
@@ -92,6 +94,8 @@ public class Payment extends AppCompatActivity implements PaymentResultListener 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("customer");
         myRef.child(user.getUid()).setValue(obj);
+        Intent intent = new Intent(getApplicationContext(), display_details.class);
+        startActivity(intent);
 
     }
 
